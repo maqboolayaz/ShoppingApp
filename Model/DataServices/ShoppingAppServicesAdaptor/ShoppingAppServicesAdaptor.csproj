@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\AppComponentModels\AppComponentModels.csproj" />
+    <ProjectReference Include="..\..\AppConstants\AppConstants.csproj" />
+    <ProjectReference Include="..\..\AppInterfaces\AppInterfaces.csproj" />
+    <ProjectReference Include="..\..\HttpClientHandler\HttpClientHandler.csproj" />
+  </ItemGroup>
+
+</Project>

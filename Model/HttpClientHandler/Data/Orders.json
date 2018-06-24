@@ -1,0 +1,42 @@
+﻿[
+  {
+    "orderId": "a63884f0-3f7f-4ddf-80c7-ca4fc99a3adf",
+    "orderNumber": 407101,
+    "productName": "Korkdichtungsbahnen - max. 120ºC",
+    "targetQtyBuom": 5,
+    "targetSize": "80x60",
+    "targetDeliveryAt": "2018-06-21T16:00:00.000Z",
+    "targetPsa": "Bauplatz 1",
+    "targetPsaBin": "Anlieferpunkt 3"
+  },
+  {
+    "orderId": "39918d2e-c72f-4c87-b8f7-46f3f64b7935",
+    "orderNumber": 407102,
+    "productName": "Acryl-Dispersionsdichtungsmasse - Kartusche",
+    "targetQtyBuom": 1,
+    "targetSize": "310ml",
+    "targetDeliveryAt": "2018-06-21T16:30:00.000Z",
+    "targetPsa": "Bauplatz 4",
+    "targetPsaBin": "Anlieferpunkt 1"
+  },
+  {
+    "orderId": "264df721-29e2-4b28-baa3-d06d8b591677",
+    "orderNumber": 407103,
+    "productName": "Dichtungspapier - max. 400ºC",
+    "targetQtyBuom": 3,
+    "targetSize": "120x120",
+    "targetDeliveryAt": "2018-06-21T16:35:00.000Z",
+    "targetPsa": "Bauplatz A2",
+    "targetPsaBin": "Anlieferpunkt 2"
+  },
+  {
+    "orderId": "9a2c249a-d6ca-4a2f-b978-458f6ff70ee7",
+    "orderNumber": 407104,
+    "productName": "Dichtband - Teflon - standard",
+    "targetQtyBuom": 1,
+    "targetSize": "Breite 12 / Stärke 0,1mm",
+    "targetDeliveryAt": "2018-06-21T16:55:00.000Z",
+    "targetPsa": "Bauplatz 1",
+    "targetPsaBin": "Anlieferpunkt 1"
+  }
+]
