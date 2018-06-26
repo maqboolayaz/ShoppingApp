@@ -5,15 +5,11 @@
                       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                       xmlns:views="using:MvvmCross.Platforms.Uap.Views"
                       xmlns:data="using:AppComponentModels"
-                      xmlns:vm="using:ShoppingApp.Core.ViewModels"
                       mc:Ignorable="d">
-    <Page.DataContext>
-        <vm:OrdersViewModel x:Name="ViewModel" />
-    </Page.DataContext>
     <StackPanel Margin="12,0,12,0">
-        <TextBlock Text="Testing1" />
-        <TextBlock Text="Testing 2" />
-        <ListView ItemsSource="{x:Bind ViewModel.OrdersList, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+        <ListView ItemsSource="{Binding OrdersList, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                  IsItemClickEnabled="True"
+                  ItemClick="OrdersView_ItemClick">
             <ListView.ItemTemplate>
                 <DataTemplate x:Name="DoubleLineDataTemplate" x:DataType="data:OrdersDTO">
                     <StackPanel Orientation="Horizontal" Height="64" AutomationProperties.Name="{x:Bind ProductName}">
@@ -23,8 +19,22 @@
                             </Ellipse.Fill>
                         </Ellipse>
                         <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="12,0,0,0">
-                            <TextBlock Text="{x:Bind ProductName}"  Style="{ThemeResource BaseTextBlockStyle}" Foreground="{ThemeResource SystemControlPageTextBaseHighBrush}" />
-                            <TextBlock Text="{x:Bind TargetPsa}" Style="{ThemeResource BodyTextBlockStyle}" Foreground="{ThemeResource SystemControlPageTextBaseMediumBrush}"/>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="#" />
+                                <TextBlock Text="{x:Bind OrderNumber}" Margin="0 0 8 0" Style="{ThemeResource BaseTextBlockStyle}" Foreground="{ThemeResource SystemControlPageTextBaseHighBrush}" />
+                                <TextBlock Text="-" Margin="0 0 8 0"/>
+                                <TextBlock Text="{x:Bind ProductName}" Margin="0 0 8 0" Style="{ThemeResource BaseTextBlockStyle}" Foreground="{ThemeResource SystemControlPageTextBaseHighBrush}" />
+                                <TextBlock Text="-" Margin="0 0 8 0"/>
+                                <TextBlock Text="{x:Bind TargetSize}"  Style="{ThemeResource BaseTextBlockStyle}" Foreground="{ThemeResource SystemControlPageTextBaseHighBrush}" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Anlieferung:" Margin="0 0 8 0" Foreground="{ThemeResource SystemControlPageTextBaseMediumBrush}"/>
+                                <TextBlock Text="{x:Bind TargetDeliveryDate}" Margin="0 0 8 0" Style="{ThemeResource BodyTextBlockStyle}" Foreground="{ThemeResource SystemControlPageTextBaseMediumBrush}"/>
+                                <TextBlock Text="-" Margin="0 0 8 0"/>
+                                <TextBlock Text="{x:Bind TargetPsa}" Margin="0 0 8 0" Style="{ThemeResource BodyTextBlockStyle}" Foreground="{ThemeResource SystemControlPageTextBaseMediumBrush}"/>
+                                <TextBlock Text="-" Margin="0 0 8 0"/>
+                                <TextBlock Text="{x:Bind TargetPsaBin}" Style="{ThemeResource BodyTextBlockStyle}" Foreground="{ThemeResource SystemControlPageTextBaseMediumBrush}"/>
+                            </StackPanel>
                         </StackPanel>
                     </StackPanel>
                 </DataTemplate>
